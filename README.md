@@ -17,6 +17,9 @@ Converts a GGA sentence to TF transformation.
 - `gps_src_epsg`: EPSG of the GGA sentence (should be fine with 4326)
 - `gps_tgt_epsg`: target EPSG for projecting llh to xyz (default: 32653; UTM
   Zone 53N)
+- `visualize`: whether or not to publish the GPS coordinate as marker
+- `marker_phi`: the diameter of the marker's outer circle
+- `marker_color`: RGBA value of the marker
 
 
 ## Subscribed topics
@@ -26,7 +29,7 @@ Converts a GGA sentence to TF transformation.
 
 ## Published topics
 
-None
+- `gps_pose`: when `visualize` is enabled, the GPS coordinate visualization
 
 
 ## Published TF transformations
