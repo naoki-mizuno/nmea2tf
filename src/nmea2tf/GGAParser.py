@@ -5,7 +5,7 @@ import tf.transformations
 import math
 
 
-class Parser(object):
+class Parser:
     @staticmethod
     def parse(sentence):
         if sentence is None or sentence == '':
