@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 import rospy
 import tf
@@ -56,5 +56,5 @@ def nmea_cb(msg):
 
 nmea_sub = rospy.Subscriber(nmea_topic, Sentence, nmea_cb, queue_size=1)
 
-print('Listening to GGA sentences')
+rospy.loginfo('Listening to GGA sentences')
 rospy.spin()

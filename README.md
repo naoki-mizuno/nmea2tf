@@ -6,6 +6,7 @@ Converts a GGA sentence to TF transformation.
 ## Dependencies
 
 - [python-gdal](https://pypi.python.org/pypi/GDAL)
+- [nmea_msgs](http://wiki.ros.org/nmea_msgs)
 
 
 ## Parameters
@@ -19,7 +20,7 @@ Converts a GGA sentence to TF transformation.
   Zone 53N)
 - `visualize`: whether or not to publish the GPS coordinate as marker
 - `marker_phi`: the diameter of the marker's outer circle
-- `marker_color`: RGBA value of the marker
+- `marker_color`: List of RGBA values of the marker, each in the range [0, 1]
 
 
 ## Subscribed topics

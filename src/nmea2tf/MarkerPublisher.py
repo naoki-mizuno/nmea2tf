@@ -1,5 +1,3 @@
-#!/usr/bin/env python2
-
 from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import Point
 
@@ -23,7 +21,6 @@ class MarkerPublisher:
         m.color = color
         return m
 
-
     @staticmethod
     def circle_points(r, dt):
         points = list()
@@ -36,7 +33,6 @@ class MarkerPublisher:
             points.append(p)
             theta += dt
         return points
-
 
     @staticmethod
     def make_circle(color, phi, thickness, marker_id, header):
@@ -51,11 +47,9 @@ class MarkerPublisher:
         [m.colors.append(m.color) for i in range(len(m.points))]
         return m
 
-
     @staticmethod
     def make_marker(color, phi, header):
         ma = MarkerArray()
         ma.markers.append(MarkerPublisher.make_point(color, phi * 0.3, 0, header))
         ma.markers.append(MarkerPublisher.make_circle(color, phi, phi * 0.2, 1, header))
         return ma
-
